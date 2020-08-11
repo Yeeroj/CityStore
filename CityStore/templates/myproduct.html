@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form  method="get" action="myproductsearch" class="form-inline">
+<!--  <input class="form-control mr-sm-2" type="search" placeholder="Product Name" name="search" id="search" aria-label="Search">-->
+<!--  <input class="form-control mr-sm-2" type="search" placeholder="Place/city" name="search2" id="search2" aria-label="Search">-->
+<!--    <text type="search"  name="myproductsearch" id="myproductsearch">{{request.user.shopdetail.shopname}}</text>-->
+    <text>{{request.user.shopdetail.shopname}}</text>
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+
+{% endblock %}

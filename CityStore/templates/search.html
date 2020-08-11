@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if results %}
+<h1>Your result are</h1>
+{% else %}
+<h1>Sorry</h1>
+{% endif %}
+{% for result in results %}
+
+
+<div class="card-columns">
+  <div class="card">
+    <img class="card-img-top" src="{{ result.image.url }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{result.name}}</h5>
+      <p class="card-text">Shop:{{result.shopname}}</p>
+      <p class="card-text">Address:{{result.address}}</p>
+
+      <button class="btn btn-success">Price:{{result.price}}</button>
+    </div>
+  </div>
+</div>
+<!--<hr>-->
+{% endfor %}
+
+
+{% endblock content%}
